@@ -18,5 +18,5 @@ jobs:
           host: ${{ secrets.HOSTNAME }}
           username: ${{ secrets.USER_NAME }}
           key: ${{ secrets.AWS_PRIVATE_KEY }}
-          script: whoami
+          script: mkdir action_test
 
