@@ -46,10 +46,5 @@ jobs:
             git checkout master &&
             git fetch --all &&
             git reset --hard origin/master &&
-            git pull origin master &&
-<<<<<<< HEAD
-            docker-compose -f docker-compose.prod.yml up -d --build 
-=======
-            docker compose -f docker-compose.prod.yml up -d --build 
->>>>>>> parent of 300ec47 (Removed docker componenets)
-          '
+            git pull origin master 
+      '
