@@ -13,10 +13,17 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Build the docker_compose
+<<<<<<< HEAD
       run: docker-compose up -d --build
       
     - name: Buid the application
       run: docker-compose exec -T counter_app npm run build
+=======
+      run: docker compose up -d --build
+      
+    - name: Buid the application
+      run: docker compose exec -T counter_app npm run build
+>>>>>>> parent of 300ec47 (Removed docker componenets)
 
   Deploy:
     needs: build
@@ -40,5 +47,9 @@ jobs:
             git fetch --all &&
             git reset --hard origin/master &&
             git pull origin master &&
+<<<<<<< HEAD
             docker-compose -f docker-compose.prod.yml up -d --build 
+=======
+            docker compose -f docker-compose.prod.yml up -d --build 
+>>>>>>> parent of 300ec47 (Removed docker componenets)
           '
