@@ -8,7 +8,7 @@ jobs:
 #First we will see the application build or not , then we will deploy in EC2
 
   Deploy:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     
     steps:
       - uses: actions/checkout@v2 
