@@ -13,12 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2 
       - name: executing remote ssh commands using ssh key
-        uses: appleboy/ssh-action@v0.1.10
-        with:
-          host: ${{ secrets.HOSTNAME }}
-          username: ${{ secrets.USER_NAME }}
-          key: ${{ secrets.AWS_PRIVATE_KEY }}
-          script: echo "Hello"
+      
           
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
